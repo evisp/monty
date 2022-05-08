@@ -13,17 +13,17 @@ void open_and_read(char **argv)
 	FILE *fp;
 	char *buf = NULL, *token = NULL, command[1024];
 	size_t len = 0;
-	size_t line_size;
+	ssize_t line_size;
 	unsigned int line_counter = 1;
 	stack_t *top = NULL;
 
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 		open_error(argv);
-	while ((line_size = getline(&buf, &len, fp)) != EOF)
+	while ((line_size = getline(&buf, &len, fp)) != -1)
 	{
 		token = strtok(buf, "\n\t\r ");
-		if (token == '\0')
+		if (*token == '\0')
 			continue;
 		strcpy(command, token);
 		if (is_comment(token, line_counter) == 1)
