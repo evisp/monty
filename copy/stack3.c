@@ -18,7 +18,7 @@ void _mod(stack_t **top, unsigned int line_number)
 
 	tmp = (*top)->next;
 	tmp->n = (tmp->n) % (*top)->n;
-	_pop(top, line_number);
+	pop_stack(top, line_number);
 }
 /**
  * rotl_stack -main entry.

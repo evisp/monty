@@ -9,7 +9,6 @@
 #include <sys/types.h>
 
 extern int n;
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -73,17 +72,17 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
 
 
 /* Stack */
-void _push(stack_t **top, unsigned int line);
-void _pall(stack_t **top, unsigned int line);
-void _pint(stack_t **top, unsigned int line);
-void _pop(stack_t **top, unsigned int line_number);
-void _free(stack_t *top);
+void push_stack(stack_t **top, unsigned int line_number);
+void pall_stack(stack_t **top, unsigned int line_number);
+void free_stack(stack_t *top);
+void pint_stack(stack_t **top, unsigned int line_number);
+void pop_stack(stack_t **top, unsigned int line_number);
 
 /* stack operations */
 void _swap(stack_t **top, unsigned int line);
 void _add(stack_t **top, unsigned int line);
-void _sub(stack_t **top, unsigned int line);
-void _div(stack_t **top, unsigned int line);
+void _sub(stack_t **top, unsigned int line_number);
+void _div(stack_t **top, unsigned int line_number);
 void _mul(stack_t **top, unsigned int line);
 
 /* stack 3 */
