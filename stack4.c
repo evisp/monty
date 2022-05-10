@@ -1,17 +1,10 @@
 #include "monty.h"
-/**
- * pstr_stack -main entry
- * Description: prints the string starting at the top of the stack.
- * @top: element at the top of the stack (head)
- * @line_number: line
- * Return: void
- */
-void pstr_stack(stack_t **top, unsigned int line_number)
+
+void _pstr(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	stack_t *tmp;
 	int ascii_num;
 
-	(void)line_number;
 	if (*top == NULL)
 	{
 		putchar('\n');

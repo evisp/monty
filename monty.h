@@ -76,7 +76,7 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
 void _push(stack_t **top, unsigned int line);
 void _pall(stack_t **top, unsigned int line);
 void _pint(stack_t **top, unsigned int line);
-void _pop(stack_t **top, unsigned int line_number);
+void _pop(stack_t **top, unsigned int line);
 void _free(stack_t *top);
 
 /* stack operations */
@@ -87,13 +87,13 @@ void _div(stack_t **top, unsigned int line);
 void _mul(stack_t **top, unsigned int line);
 
 /* stack 3 */
-void _mod(stack_t **top, unsigned int line_number);
-void rotl_stack(stack_t **top, unsigned int line_number);
-void rotr_stack(stack_t **top, unsigned int line_number);
+void _mod(stack_t **top, unsigned int line);
+void _rotl(stack_t **top, unsigned int line);
+void _rotr(stack_t **top, unsigned int line);
 void _nop(stack_t **top, unsigned int line);
-void _pchar(stack_t **top, unsigned int line_number);
+void _pchar(stack_t **top, unsigned int line);
 
 /*stack4 */
-void pstr_stack(stack_t **top, unsigned int line_number);
+void _pstr(stack_t **top, unsigned int line);
 
 #endif /* _MONTY_H_ */

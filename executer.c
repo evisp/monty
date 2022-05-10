@@ -1,11 +1,6 @@
 #include "monty.h"
 int number;
-/**
- * open_and_read -main entry.
- *Description:Function that open, read and execute.
- * @argv: arguments received by parameter
- * Return: void
- **/
+
 void open_and_read(char **argv)
 {
 /* prototype from struct instructions*/
@@ -49,7 +44,7 @@ void open_and_read(char **argv)
 	fclose(fp);
 	if (buf != NULL)
 		free(buf);
-	free_stack(top);
+	_free(top);
 }
 /**
  * is_number - check if string received is int or not
